@@ -1,0 +1,63 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- CSS stylesheets archives link -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <title>{% block title %}Brito Alves, Lapenda & Bradley{% endblock %}</title>
+</head>
+<body>
+    <div class="wrapper">
+        
+        <!-- Fixed navbar -->
+        <nav class="nav" id="nav">
+            {% include 'includes/navbar.html' %}
+        </nav>
+
+        <!-- Website sections -->
+        <div class="wrapper-content">
+
+            <!-- Section 1: Banner -->
+            <section class="section" id="banner">
+                {% include 'includes/banner.html' %}
+            </section>
+
+            <!-- Section 2: About the office -->
+            <section class="section" id="about">
+                {% include 'includes/about.html' %}
+            </section>
+
+            <!-- Section 3: Partners -->
+            <section class="section" id="partners">
+                {% include 'includes/partners.html' %}
+            </section>
+
+            <!-- Section 4: Fields of work-->
+            <section class="section" id="areas">
+                {% include 'includes/areas.html' %}
+            </section>
+
+            <!-- Section 5: Contact form -->
+            <section class="section" id="contact">
+                {% include 'includes/contact.html' %}
+            </section>
+
+            <!-- Section 6: Footer -->
+            <footer class="section" id="footer">
+                {% include 'includes/footer.html' %}
+            </footer>
+            
+        </div>
+
+    </div>
+
+    <!-- JavaScripts archives links -->
+    <script src="{% static 'js/balb.js' %}"></script>
+
+</body>
+</html>
